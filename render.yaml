@@ -1,0 +1,18 @@
+# 저장소 루트에서 Blueprint로 읽는다. 실제 비밀키는 Render에서 입력한다.
+services:
+  - type: web
+    name: shopping-mall
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: COOKIE_SECURE
+        value: "true"

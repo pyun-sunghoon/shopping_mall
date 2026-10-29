@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>우리 상점</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body>
+  <header class="header"><div class="header-inner">
+    <a class="brand" href="/#products">우리 상점</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav">메뉴 ☰</button>
+    <nav id="nav" class="nav" aria-label="주 메뉴">
+      <a href="/#products">상품</a><a href="/#cart">장바구니</a><a href="/#account">회원정보</a><a href="/#orders">구매내역</a><a href="/#login">로그인</a>
+      <button id="logout" type="button" class="link-button">로그아웃</button>
+    </nav>
+  </div></header>
+  <main class="container"><div id="notice" role="status" aria-live="polite"></div><div id="app"></div></main>
+</body>
+</html>

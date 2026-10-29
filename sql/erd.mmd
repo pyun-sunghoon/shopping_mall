@@ -1,0 +1,5 @@
+erDiagram
+    users ||--o{ orders : 소유
+    orders ||--o{ order_items : 포함
+    products ||--o{ order_items : 상품
+    orders ||--o| payments : 결제
